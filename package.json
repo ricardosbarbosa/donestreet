@@ -1,0 +1,19 @@
+{
+  "name": "donestreet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "client": "yarn workspace frontend start",
+    "server": "yarn workspace backend start:dev",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^6.0.2"
+  }
+}

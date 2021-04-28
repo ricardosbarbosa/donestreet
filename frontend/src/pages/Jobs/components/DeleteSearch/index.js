@@ -1,0 +1,1 @@
+export { default as DeleteSearch } from './DeleteSearch'
